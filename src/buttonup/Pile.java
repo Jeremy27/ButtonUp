@@ -6,10 +6,25 @@
 
 package buttonup;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author jeremy
  */
 public class Pile {
+    public static enum Bouton {
+        BLANC,
+        ROUGE,
+        NOIR;
+    }
+    
+    private ArrayList<Bouton> listeBoutons;
+    
+    public Pile(Bouton bouton) {
+        listeBoutons = new ArrayList<>();
+        listeBoutons.add(bouton);
+    }
+    
     
 }

@@ -13,9 +13,9 @@ import static org.junit.Assert.*;
  *
  * @author jeremy
  */
-public class TestJeu {
+public class JeuTest {
     
-    public TestJeu() {
+    public JeuTest() {
     }
     
 }

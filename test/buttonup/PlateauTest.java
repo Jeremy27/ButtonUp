@@ -13,9 +13,9 @@ import static org.junit.Assert.*;
  *
  * @author jeremy
  */
-public class TestPlateau {
+public class PlateauTest {
     
-    public TestPlateau() {
+    public PlateauTest() {
     }
     
 }

@@ -13,9 +13,9 @@ import static org.junit.Assert.*;
  *
  * @author jeremy
  */
-public class TestPile {
+public class PileTest {
     
-    public TestPile() {
+    public PileTest() {
     }
     
 }

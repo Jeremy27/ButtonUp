@@ -6,10 +6,21 @@
 
 package buttonup;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author jeremy
  */
 public class Plateau {
     
+    private ArrayList<Pile> listePiles;
+    
+    public Plateau() {
+        listePiles = new ArrayList<>();
+    }
+    
+    Plateau(ArrayList<Pile> listePiles) {
+        this.listePiles = listePiles;
+    }
 }
