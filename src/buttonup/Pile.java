@@ -10,14 +10,21 @@ import java.util.Objects;
 public class Pile {
 
     private ArrayList<Bouton> listeBoutons;
-
-    public Pile(Bouton bouton) {
+    private int numPile;
+    
+    public Pile(int numPile, Bouton bouton) {
         listeBoutons = new ArrayList<>();
         listeBoutons.add(bouton);
+        this.numPile = numPile;
     }
 
-    Pile(ArrayList<Bouton> listeBoutons) {
+    Pile(int numPile, ArrayList<Bouton> listeBoutons) {
         this.listeBoutons = listeBoutons;
+        this.numPile = numPile;
+    }
+    
+    public int getNumPile() {
+        return numPile;
     }
 
     public int getHauteur() {
@@ -40,8 +47,8 @@ public class Pile {
         return listeBoutons;
     }
     
-    public String getCouleurSommet() {
-        return listeBoutons.get(listeBoutons.size()-1).name();
+    public Bouton getBoutonSommet() {
+        return listeBoutons.get(listeBoutons.size()-1);
     }
     
     @Override
@@ -78,6 +85,10 @@ public class Pile {
         if (!Objects.equals(this.listeBoutons, other.listeBoutons)) {
             return false;
         }
+        if(this.numPile != ((Pile) obj).getNumPile()){
+            return false;
+        }
+            
         return true;
     }
 }
