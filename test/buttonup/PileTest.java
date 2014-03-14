@@ -42,7 +42,7 @@ public class PileTest {
     }
     
     @Test
-    public void testCouleurSommet() {
+    public void testBoutonSommet() {
         Pile pile1 = new Pile(1, new ArrayList<>(Arrays.asList(Bouton.NOIR, Bouton.BLANC, Bouton.ROUGE)));
         assertEquals(pile1.getBoutonSommet(), Bouton.ROUGE);
         
@@ -51,6 +51,18 @@ public class PileTest {
         
         Pile pile3 = new Pile(3, new ArrayList<>(Arrays.asList(Bouton.NOIR, Bouton.BLANC, Bouton.BLANC)));
         assertEquals(pile3.getBoutonSommet(), Bouton.BLANC);
+    }
+    
+    @Test
+    public void testGetScore() {
+        Pile pile1 = new Pile(1, new ArrayList<>(Arrays.asList(Bouton.NOIR, Bouton.ROUGE, Bouton.ROUGE, Bouton.NOIR, Bouton.NOIR)));
+        assertEquals(10, pile1.getScore(Bouton.NOIR));
+        assertEquals(5, pile1.getScore(Bouton.ROUGE));
+        
+        Pile pile2 = new Pile(2, new ArrayList<>(Arrays.asList(Bouton.NOIR, Bouton.ROUGE, Bouton.ROUGE, Bouton.BLANC, Bouton.BLANC,
+                Bouton.ROUGE, Bouton.BLANC, Bouton.NOIR)));
+        assertEquals(9, pile2.getScore(Bouton.NOIR));
+        assertEquals(11, pile2.getScore(Bouton.ROUGE));
     }
     
     @Test

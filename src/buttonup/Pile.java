@@ -10,7 +10,7 @@ import java.util.Objects;
 public class Pile {
 
     private ArrayList<Bouton> listeBoutons;
-    private int numPile;
+    private final int numPile;
     
     public Pile(int numPile, Bouton bouton) {
         listeBoutons = new ArrayList<>();
@@ -49,6 +49,18 @@ public class Pile {
     
     public Bouton getBoutonSommet() {
         return listeBoutons.get(listeBoutons.size()-1);
+    }
+    
+    public int getScore(Bouton bouton) {
+        int score = 0;
+        
+        for (int i = 0; i < listeBoutons.size(); i++) {
+            if(listeBoutons.get(i).equals(bouton)) {
+                score += i+1;
+            }
+        }
+        
+        return score;
     }
     
     @Override
