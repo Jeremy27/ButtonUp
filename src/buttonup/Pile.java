@@ -51,6 +51,22 @@ public class Pile {
         return listeBoutons.get(listeBoutons.size()-1);
     }
     
+    public Bouton getBoutonBase() {
+        return listeBoutons.get(0);
+    }
+    
+    public Bouton supprimerBoutonBase() {
+        return listeBoutons.remove(0);
+    }
+    
+    public Bouton supprimerBoutonSommet() {
+        return listeBoutons.remove(listeBoutons.size()-1);
+    }
+    
+    public boolean estVide() {
+        return listeBoutons.isEmpty();
+    }
+    
     public int getScore(Bouton bouton) {
         int score = 0;
         
